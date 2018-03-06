@@ -1,0 +1,89 @@
+@keyframes panning {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 25% 100%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 75% 100%;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.pan-down {
+  top: 50;
+  height: 100vh;
+  width: 100%;
+  background: url('./images/open-crawl-pan.png') no-repeat;
+  background-size: 100%;
+  animation: panning 100s linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.post-pan {
+  left: 0;
+  margin: auto;
+  position: absolute;
+  opacity: 0;
+  top: 45%;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  animation: appear 8s linear 20s;
+  animation-fill-mode: forwards;
+  color: white;
+  width: 100%;
+}
+
+.pan-box {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.pan-button {
+  width: 100%;
+  background: #4bd5ee;
+  border-radius: 5px;
+  border: 2px solid #4bd5ee;
+  color: #ffffff;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0px 10px;
+  font-weight: 700;
+}
+
+.pan-button .left {
+  float: left;
+}
+
+.pan-button .right {
+  float: right;
+}
+
+@media only screen and (max-width: 770px) {
+  .pan-down {
+    background: url('./images/ipad-pan-down.png') no-repeat;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .pan-down {
+    background: url('./images/sw-background-space.png') no-repeat;
+  }
+}
