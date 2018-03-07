@@ -19,7 +19,7 @@ class MadLibsEntry extends Component {
             type="text"
             value={this.props.madLibsEntry.verb}
             onChange={this.props.handleVerbChange}
-            placeholder="ENTER AN ACTION VERB"
+            placeholder="ENTER A VERB"
             className="madlibs-input"
           />
           <input
